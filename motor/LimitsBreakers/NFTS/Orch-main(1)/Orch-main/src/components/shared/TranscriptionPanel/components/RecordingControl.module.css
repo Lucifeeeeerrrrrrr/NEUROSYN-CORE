@@ -1,0 +1,29 @@
+/* SPDX-License-Identifier: MIT OR Apache-2.0
+   Copyright (c) 2025 Guilherme Ferrari Brescia */
+
+/* Base container - Neural activation container */
+
+/* Neural activation button - Recording control */
+
+/* Active recording state */
+
+/* Inactive recording state */
+.recordButtonInactive {
+  border: 3px solid #00faff;
+  box-shadow: 0 0 32px 8px rgba(0, 250, 255, 0.2);
+}
+
+/* Recording status indicator */
+
+/* Pulse animation for active recording */
+@keyframes pulse {
+  0% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.7;
+  }
+  100% {
+    opacity: 1;
+  }
+}

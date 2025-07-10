@@ -1,0 +1,153 @@
+/* SPDX-License-Identifier: MIT OR Apache-2.0
+ * Copyright (c) 2025 Guilherme Ferrari Brescia
+ */
+
+/* Google Fonts imported via HTML head for better COEP compatibility */
+
+:root {
+  --orchos-font-title: 'Orbitron', 'SF Pro Display', 'Inter', 'Roboto', Arial, sans-serif;
+  --orchos-font-ui: 'Inter', 'SF Pro Text', 'Roboto', Arial, sans-serif;
+}
+
+body, .orchos-app-root {
+  background:
+    radial-gradient(ellipse at 50% 40%, rgba(0,240,255,0.07) 0%, transparent 70%),
+    linear-gradient(180deg, #0a0a23 0%, #181828 60%, #101026 100%) !important;
+  background-attachment: fixed;
+}
+
+.orchos-header-glass {
+  background: linear-gradient(180deg, rgba(10,10,35,0.82) 0%, rgba(10,10,35,0.58) 85%, rgba(10,10,35,0.40) 100%);
+  -webkit-backdrop-filter: blur(14px) saturate(1.2);
+  backdrop-filter: blur(14px) saturate(1.2);
+  box-shadow: 0 1px 12px 0 #00faff0a;
+}
+
+.orchos-header-gradient-text {
+  background: linear-gradient(90deg, #00F0FF, #8F00FF);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  color: transparent;
+  text-shadow: 0 0 15px rgba(0,240,255,0.3);
+}
+
+body, .orchos-card, .orchos-btn, .orchos-text, input, textarea, select {
+  font-family: 'Inter', Arial, sans-serif;
+  font-feature-settings: 'ss01' on, 'cv01' on, 'cv02' on;
+  letter-spacing: 0.01em;
+  -webkit-font-smoothing: antialiased;
+  color: var(--orchos-text-main);
+}
+
+.orchos-title, h1, h2, h3, h4, h5, h6 {
+  font-family: 'Orbitron', Arial, sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--orchos-primary);
+}
+
+
+/* Orbitron font imported via HTML head */
+
+:root {
+  /* Cognição Quântica Theme */
+  --orchos-bg: #0A0A23;
+  --orchos-card-bg: rgba(20, 20, 40, 0.72);
+  --orchos-primary: #00F0FF;
+  --orchos-secondary: #8F00FF;
+  --orchos-gold: #FFD700;
+  --orchos-white: #FFFFFF;
+  --orchos-gradient: linear-gradient(90deg, #00F0FF 0%, #8F00FF 100%);
+  --orchos-glass-blur: 18px;
+  --orchos-border: rgba(0,240,255,0.18);
+  --orchos-card-shadow: 0 8px 32px 0 rgba(0, 240, 255, 0.18);
+  --orchos-divider: rgba(255,255,255,0.08);
+  --orchos-text-main: #E3F6FF;
+  --orchos-text-muted: #8A9EB7;
+  --orchos-anim-wave: #00F0FF44;
+}
+
+ body, #root {
+  background: var(--orchos-bg) !important;
+  color: var(--orchos-text-main);
+  font-family: 'Inter', 'Roboto', 'Segoe UI', Arial, sans-serif;
+}
+
+
+.orchos-card {
+  background: var(--orchos-card-bg);
+  box-shadow: var(--orchos-card-shadow);
+  border-radius: 18px;
+  border: 1.5px solid var(--orchos-border);
+  -webkit-backdrop-filter: blur(var(--orchos-glass-blur));
+  backdrop-filter: blur(var(--orchos-glass-blur));
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  transition: box-shadow 0.3s, border-color 0.3s;
+  color: var(--orchos-text-main);
+}
+/* Efeito apenas no hover direto do card, sem roxo e sem focus-within */
+.orchos-card:hover,
+.orchos-card:active,
+.orchos-card:focus-visible {
+  box-shadow: 0 8px 32px 0 var(--orchos-primary), 0 0 0 2px var(--orchos-primary);
+  border-color: var(--orchos-primary);
+  outline: none;
+}
+
+
+.orchos-title {
+  font-family: 'Orbitron', 'Inter', 'Roboto', 'Segoe UI', Arial, sans-serif !important;
+  color: var(--orchos-primary);
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  font-size: 1.35rem;
+}
+
+@keyframes orchos-bg-wave {
+  0% { filter: blur(0px); opacity: 0.85; }
+  100% { filter: blur(6px); opacity: 1; }
+}
+
+/* Toggle Switch Theme Overrides */
+.toggle-switch-track {
+  position: relative;
+  width: 48px;
+  height: 28px;
+  border-radius: 999px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.toggle-switch-track.on {
+  background: #00F0FF;
+  box-shadow: 
+    0 0 0 1px rgba(0, 240, 255, 0.2),
+    0 0 12px rgba(0, 240, 255, 0.4),
+    inset 0 0 8px rgba(0, 240, 255, 0.2);
+}
+
+.toggle-switch-track.off {
+  background: #374151;
+  border: 1px solid #4B5563;
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.toggle-switch-thumb {
+  position: absolute;
+  top: 4px;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border-radius: 999px;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.toggle-switch-thumb.on {
+  transform: translateX(24px);
+}
+
+.toggle-switch-thumb.off {
+  transform: translateX(4px);
+}
